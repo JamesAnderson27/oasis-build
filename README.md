@@ -1,10 +1,6 @@
-# Welcome to Oasis!
+# READ ME
 
-This mockup was creating using Streamlit. This service allows us to create functional webpages without front-end expertise.  
+(2/16)
 
-:heart:		File Path -->		:heart:
-
-
-
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+	- Starting build with Streamlit. Created example repo using a template from Streamlit.
+	- Made edits to the markdown.

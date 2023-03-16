@@ -5,11 +5,11 @@ import pandas as pd
 import streamlit as st
 
 """
-# Welcome to Oasis!
+# Welcome to Oasis! :campfire:
 
 This mockup was creating using Streamlit. This service allows us to create functional webpages without front-end expertise.  
 
-:heart:     File Path -->  '/streamlit_app.py'     :heart:
+:campfire:     File Path -->  '/streamlit_app.py'     :campfire:
 
 
 In the meantime, below is an example of what you can do with just a few lines of code:
