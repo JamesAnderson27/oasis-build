@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 
 
-title_alignment=
+st.markdown(
+
 '''
 <style>
 #evergreen_tree:  :green[Welcome to Oasis!] :evergreen_tree: {
@@ -11,7 +12,7 @@ title_alignment=
 </style>
 '''
 
-st.markdown(title_alignment, unsafe_allow_html=True)
+    , unsafe_allow_html=True)
 
 st.write('We provide a centralized pool of public information to inform your next trip into the *Great* Outdoors.')
 
