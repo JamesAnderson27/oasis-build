@@ -1,22 +1,32 @@
 import streamlit as st
 import pandas as pd
 
-style = "<style>h1 {text-align: center;}</style>"
-st.markdown(style, unsafe_allow_html=True)
-st.columns(3)[1].header(":evergreen_tree:  :green[Welcome to Oasis!] :evergreen_tree:")
 
+
+st.title('      :evergreen_tree:  :green[Welcome to Oasis!] :evergreen_tree:')
 st.write('We provide a centralized pool of public information to inform your next trip into the *Great* Outdoors.')
+
+
 
 with open('PRODUCT_foliummap.html','r') as f:
     html_read = f.read()
-
 st.header("Prototype Map")
 st.components.v1.html(html_read,height=400)
+
+
 
 st.write("Here's our first attempt at using data to create a table:")
 df = pd.DataFrame({
     'first column': [1, 2, 3, 4],
     'second column': [10, 20, 30, 40]
 })
-st.table(df)
 st.write(df)
+
+
+
+site_code = st.text_input('Please enter in the code of your desired campsite...')
+assert site_code in [1,2]
+
+message_list = ['You picked campsite #1!','You picked campsite #2!']
+
+st.write('you selected: ',message_list[site_code])
