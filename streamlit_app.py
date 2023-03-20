@@ -8,5 +8,5 @@ with open('folium_map_copy.html','r') as f:
     html_read = f.read()
 
 st.header("Prototype Map")
-st.components.v1.html(html_read,height=800)
+st.components.v1.html(html_read,height=400)
 
