@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title('<div style="text-align: center;">#evergreen_tree:  :green[Welcome to Oasis!] :evergreen_tree:</div>', unsafe_allow_html=True)
+st.title('      evergreen_tree:  :green[Welcome to Oasis!] :evergreen_tree:')
 
 st.write('We provide a centralized pool of public information to inform your next trip into the *Great* Outdoors.')
 
