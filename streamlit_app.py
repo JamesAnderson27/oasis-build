@@ -25,8 +25,5 @@ st.write(df)
 
 
 site_code = st.text_input('Please enter in the code of your desired campsite...')
-assert site_code in [1,2]
-
 message_list = ['You picked campsite #1!','You picked campsite #2!']
-
 st.write('you selected: ',message_list[site_code])
