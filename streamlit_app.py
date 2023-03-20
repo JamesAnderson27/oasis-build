@@ -18,4 +18,5 @@ In the meantime, below is an example of what you can do with just a few lines of
 with open('map_copy.html','r') as f:
     html_read = f.read()
 
-st.componenets.html(html_read)
+st.header("Show an external HTML")
+st.components.v1.html(html_read,height=200)
