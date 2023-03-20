@@ -24,11 +24,10 @@ st.write(df)
 
 
 
-number = st.number_input('Insert a number')
+site_code = st.text_input('Insert a number')
+site_code = int(site_code)
 st.write('The current number is ', number)
 
-site_code = 0
-site_code = st.number_input('Please enter in the code of your desired campsite...')
 message_list = ['You picked campsite #1!','You picked campsite #2!']
 if st.button('Click for details.'):
     st.write('You selected: ',message_list[int(site_code)])
