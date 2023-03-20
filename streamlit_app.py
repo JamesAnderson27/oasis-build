@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 """
 # :evergreen_tree: Welcome to Oasis! :evergreen_tree:
@@ -18,3 +19,4 @@ df = pd.DataFrame({
     'second column': [10, 20, 30, 40]
 })
 st.table(df)
+st.write(df)
