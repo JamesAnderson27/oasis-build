@@ -1,7 +1,7 @@
 import streamlit as st
 
 """
-# :evergreen_tree: Welcome to Oasis' Functional Dashboard! :evergreen_tree:
+# :evergreen_tree: Welcome to Oasis' Dashboard! :evergreen_tree:
 """
 
 with open('PRODUCT_foliummap.html','r') as f:
