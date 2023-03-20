@@ -15,7 +15,7 @@ This mockup was creating using Streamlit. This service allows us to create funct
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 
-with open('map.html','r') as f:
+with open('map_copy.html','r') as f:
     html_read = f.read()
 
 st.componenets.html(html_read)
