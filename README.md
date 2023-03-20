@@ -6,7 +6,7 @@
 	- File management and name consistency. (DB, PRODUCT, SCRIPT)
 	- Changing txt -> csv storage.
 	- Editing folium map markers.
-	- 
+	- Learning st.write() details, customizations.
 
 (2/16)
 

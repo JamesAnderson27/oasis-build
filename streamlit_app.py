@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 """
-# :evergreen_tree: Welcome to :green[Oasis]! :evergreen_tree:
+# :evergreen_tree:  :green[Welcome] to :green[Oasis!] :evergreen_tree:
 """
 
 st.write('We provide a centralized pool of public information to inform your next trip into the *Great* Outdoors.')
