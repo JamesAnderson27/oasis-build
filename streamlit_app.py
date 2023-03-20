@@ -1,9 +1,17 @@
 import streamlit as st
 import pandas as pd
 
+
+title_alignment=
 """
-# :evergreen_tree:  :green[Welcome] to :green[Oasis!] :evergreen_tree:
+<style>
+#evergreen_tree:  :green[Welcome to Oasis!] :evergreen_tree: {
+  text-align: center
+}
+</style>
 """
+
+st.title(title_alignment)
 
 st.write('We provide a centralized pool of public information to inform your next trip into the *Great* Outdoors.')
 
