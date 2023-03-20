@@ -19,4 +19,4 @@ with open('map_copy.html','r') as f:
     html_read = f.read()
 
 st.header("Show an external HTML")
-st.components.v1.html(html_read,height=200)
+st.components.v1.html(html_read,height=800)
