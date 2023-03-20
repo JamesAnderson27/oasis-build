@@ -23,7 +23,7 @@ df = pd.DataFrame({
 st.write(df)
 
 
-
+site_code = 0
 site_code = st.text_input('Please enter in the code of your desired campsite...')
 message_list = ['You picked campsite #1!','You picked campsite #2!']
 st.write('you selected: ',message_list[site_code])
