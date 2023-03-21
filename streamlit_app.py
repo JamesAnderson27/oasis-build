@@ -46,8 +46,7 @@ if st.button('Click for details'):
     st.header('\n')
     st.subheader(site_name)
     st.code(site_coord)
-    st.write('This is a placeholder for Amenity Icons\n(DB does not accomodate yet)')
-    st.subheader(':toilet: *Tabspace* :shower: *Tabspace* :potable_water:')
+    st.header(':toilet: *Tabspace* :shower: *Tabspace* :potable_water:')
     #st.write('Daily Forecast: ', site_weather['prec_type'])
     st.write(':orange[Daily Alerts] ')
 

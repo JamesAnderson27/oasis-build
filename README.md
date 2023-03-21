@@ -6,6 +6,7 @@
 	- Working on displaying site-specific information to be conventional & visually-cohesive.
 	- Adding Park Code to the DB_campsites to process DB_alerts.
 	- Displaying [alerts,coord] on streamlit.
+	- Formatting changes.
 
 (2/20)
 
