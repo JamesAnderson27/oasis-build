@@ -42,13 +42,15 @@ if st.button('Click for details'):
     site_forecast = {}
     site_coord = (23.3253,75.3452)
 
+    p_code='grsa'
+
     st.subheader(site_name)
     st.code(site_coord)
     #st.write('Daily Forecast: ', site_weather['prec_type'])
     st.write(':orange[Daily Alerts] ')
 
     st.table(alert_df)
-    at.table(site_df)
+    st.table(site_df)
 
     alert_list = list(alert_df.loc[alert_df['park_code']==p_code,['message']]['message'].values)
     for a in alert_list:
