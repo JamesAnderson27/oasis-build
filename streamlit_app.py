@@ -53,12 +53,7 @@ if st.button('Click for details'):
     for i,a in enumerate(alert_list):
         st.write(':orange['+str(i+1)+']','. '+str(a))
 
-    dict_ = {
-        'Col1':[1,2,3],
-        'Col2':['a','b','c']
-
-    }
-    st.write(dict_)
+    st.write(':darkblue[Campsite Type & Fees]')
 
 
 
