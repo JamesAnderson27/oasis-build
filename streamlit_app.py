@@ -36,7 +36,7 @@ st.write('Selected campsite:', site_code)
 if st.button('Click for details'):
 
     # PLACE HOLDER FOR DB READING
-    site = site_df[site_df['id']==site_code].values
+    site = site_df[site_df['id']==site_code].values[0]
     site_name = site[1]
     #site_alerts = alert_lister()
     site_forecast = {}
