@@ -33,17 +33,15 @@ site_code = st.number_input('Enter campsite number',
     step=1)
 st.write('Selected campsite:', site_code)
 
-st.table(site_df)
-
 if st.button('Click for details'):
 
     # PLACE HOLDER FOR DB READING
-    site_name = 'Cimarron Campground'
-    site_alerts = ['Black Bears in the area.']
+    site = df[df['id']==site_code].values
+    site_name = site[1]
+    #site_alerts = alert_lister()
     site_forecast = {}
-    site_coord = (23.3253,75.3452)
-
-    p_code='grsa'
+    site_coord = (site[2],site[3])
+    p_code=site[4]
 
     st.subheader(site_name)
     st.code(site_coord)
