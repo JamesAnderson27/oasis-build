@@ -50,7 +50,7 @@ if st.button('Click for details'):
 
     alert_list = list(alert_df.loc[alert_df['park_code']==p_code,['message']]['message'].values)
     for i,a in enumerate(alert_list):
-        st.write(i,'. ',a)
+        st.write(':orange['+str(i)+']','. '+str(a))
 
 
 

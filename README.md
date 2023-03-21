@@ -5,12 +5,12 @@
 	- Write script for locating campsite by site_code.
 	- Working on displaying site-specific information to be conventional & visually-cohesive.
 	- Adding Park Code to the DB_campsites to process DB_alerts.
-	- Displaying [alerts,coord] on streamlit
+	- Displaying [alerts,coord] on streamlit.
 
 (2/20)
 
 	- Reading streamlit documentation. Creating streamlit html components.
-	- File management and name consistency. (DB, PRODUCT, SCRIPT)
+	- File management and name consistency (DB, PRODUCT, SCRIPT).
 	- Changing txt -> csv storage.
 	- Editing folium map markers.
 	- Learning st.write() details, customizations.
