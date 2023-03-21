@@ -1,5 +1,12 @@
 # READ_ME
 
+(2/21)
+
+	- Write script for locating campsite by site_code.
+	- Working on displaying site-specific information to be conventional & visually-cohesive.
+	- Adding Park Code to the DB_campsites to process DB_alerts.
+	- Displaying [alerts,coord] on streamlit
+
 (2/20)
 
 	- Reading streamlit documentation. Creating streamlit html components.

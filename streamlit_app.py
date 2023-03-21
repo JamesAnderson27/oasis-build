@@ -14,8 +14,8 @@ st.write('We provide a centralized pool of public information to inform your nex
 
 
 # READ IN DB
-#alert_df = pd.read_csv('DB_alerts.csv')
-#site_df = pd.read_csv('DB_campsites.csv')
+alert_df = pd.read_csv('DB_alerts.csv')
+site_df = pd.read_csv('DB_campsites.csv')
 #forecast_df = pd.read('DB_forecast')
 
 
@@ -23,7 +23,7 @@ st.write('We provide a centralized pool of public information to inform your nex
 # DISPLAY FOLIUM MAP
 with open('PRODUCT_foliummap.html','r') as f:
     html_read = f.read()
-st.header("Prototype Map")
+st.header("Map")
 st.components.v1.html(html_read,height=400)
 
 
@@ -47,7 +47,7 @@ if st.button('Click for details'):
     st.write('Coordinates')
     st.code(site_coord)
     #st.write('Daily Forecast: ', site_weather['prec_type'])
-    st.write('Daily Alerts: ', [item for item in site_alerts])
+    st.write('Daily Alerts: ',)
 
 
 
