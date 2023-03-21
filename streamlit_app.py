@@ -49,12 +49,9 @@ if st.button('Click for details'):
     #st.write('Daily Forecast: ', site_weather['prec_type'])
     st.write(':orange[Daily Alerts] ')
 
-    st.table(alert_df)
-    st.table(site_df)
-
     alert_list = list(alert_df.loc[alert_df['park_code']==p_code,['message']]['message'].values)
-    for a in alert_list:
-        st.write(a)
+    for i,a in enumerate(alert_list):
+        st.write(i,'. ',a)
 
 
 
