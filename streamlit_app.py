@@ -46,6 +46,7 @@ if st.button('Click for details'):
     st.header('\n')
     st.subheader(site_name)
     st.code(site_coord)
+    st.write(':blue[This is a placeholder for Amenity Icons]\n :toilet:     :shower:    :potable_water:')
     #st.write('Daily Forecast: ', site_weather['prec_type'])
     st.write(':orange[Daily Alerts] ')
 
@@ -53,7 +54,7 @@ if st.button('Click for details'):
     for i,a in enumerate(alert_list):
         st.write(':orange['+str(i+1)+']','. '+str(a))
 
-    st.write(':darkblue[Campsite Type & Fees]')
+    st.write(':blue[Campsite Type & Fees]')
 
 
 
