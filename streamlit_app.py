@@ -19,7 +19,6 @@ site_df = pd.read_csv('DB_campsites.csv')
 #forecast_df = pd.read('DB_forecast')
 
 
-
 # DISPLAY FOLIUM MAP
 with open('PRODUCT_foliummap.html','r') as f:
     html_read = f.read()
@@ -46,7 +45,14 @@ if st.button('Click for details'):
     st.subheader(site_name)
     st.code(site_coord)
     #st.write('Daily Forecast: ', site_weather['prec_type'])
-    st.write(':red[Daily Alerts] ')
+    st.write(':orange[Daily Alerts] ')
+
+    st.table(alert_df)
+    at.table(site_df)
+
+    alert_list = list(alert_df.loc[alert_df['park_code']==p_code,['message']]['message'].values)
+    for a in alert_list:
+        st.write(a)
 
 
 
