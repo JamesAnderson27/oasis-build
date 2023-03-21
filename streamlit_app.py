@@ -44,10 +44,9 @@ if st.button('Click for details'):
     site_coord = (23.3253,75.3452)
 
     st.subheader(site_name)
-    st.write('Coordinates')
-    st.code(site_coord)
+    st.code('Coordinates:',site_coord)
     #st.write('Daily Forecast: ', site_weather['prec_type'])
-    st.write('Daily Alerts: ',)
+    st.write(':red[Daily Alerts] ')
 
 
 
