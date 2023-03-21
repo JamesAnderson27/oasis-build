@@ -53,7 +53,7 @@ if st.button('Click for details'):
     for i,a in enumerate(alert_list):
         st.write(':orange['+str(i+1)+']','. '+str(a))
 
-    st.write('<h3>Does this work?<h3>')
+    st.html_read('<h3>Does this work?<h3>')
 
 
 
