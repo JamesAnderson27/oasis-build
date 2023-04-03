@@ -45,17 +45,19 @@ if st.button('Click for details'):
     rez_type=site[6]
     rez_link=site[7]
     fee=site[8]
-    road_c = site[9]
+    road_c = site[9].strip('[]')
 
     st.header('\n')
-    st.subheader(site_name)
-    st.code('coord --> ',site_coord)
+    st.header(site_name)
+    st.code('coord --> '+str(site_coord))
     #st.header(':toilet: *Tabspace* :shower: *Tabspace* :potable_water:')
     #st.write('Daily Forecast: ', site_weather['prec_type'])
-    st.write(rez_type,'. To visit the public website & make reservations, click the link below.')
+    st.subheader(':lightgreen['+str(rez_type)+']')
+    st.subheader(':lightgreen['+str(road_c)+']')
+    st.write('To visit the public website & make reservations, click the link below.')
     st.write(rez_link)
-    st.write('Fees required: ',fee)
-    st.write('Vehicle requirements: ',road_c)
+    st.write('Fees required: :lightgreen[+'str(fee)+']')
+    
 
     st.write(':orange[Daily Alerts] ')
 
