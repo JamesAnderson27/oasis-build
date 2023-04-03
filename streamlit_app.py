@@ -37,15 +37,15 @@ if st.button('Click for details'):
 
     # PLACE HOLDER FOR DB READING
     site = site_df[site_df['id']==site_code].values[0]
-    site_name = site[2]
+    site_name = site[1]
     #site_alerts = alert_lister()
     site_forecast = {}
-    site_coord = (site[3],site[4])
-    p_code=site[5]
-    rez_type=site[6]
-    rez_link=site[7]
-    fee=site[8]
-    road_c = site[9]
+    site_coord = (site[2],site[3])
+    p_code=site[4]
+    rez_type=site[5]
+    rez_link=site[6]
+    fee=site[7]
+    road_c = site[8]
 
     st.header('\n')
     st.subheader(site_name)
