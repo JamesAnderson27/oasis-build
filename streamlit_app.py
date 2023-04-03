@@ -56,7 +56,7 @@ if st.button('Click for details'):
     st.subheader(':lightgreen['+str(road_c)+']')
     st.write('To visit the public website & make reservations, click the link below.')
     st.write(rez_link)
-    st.write('Fees required: :lightgreen[+'str(fee)+']')
+    st.write('Fees required: :lightgreen['+str(fee)+']')
     
 
     st.write(':orange[Daily Alerts] ')
