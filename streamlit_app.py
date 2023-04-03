@@ -58,7 +58,7 @@ if st.button('Click for details'):
     st.write(rez_link)
     st.write('Fees required: :lightgreen['+str(fee)+']')
     
-
+    st.write('Whattup yo!')
     st.write(':orange[Daily Alerts] ')
 
     alert_list = list(alert_df.loc[alert_df['park_code']==p_code,['message']]['message'].values)
