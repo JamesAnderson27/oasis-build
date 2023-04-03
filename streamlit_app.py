@@ -45,7 +45,7 @@ if st.button('Click for details'):
     rez_type=site[6]
     rez_link=site[7]
     fee=site[8]
-    road_c = site[9].strip('[]')
+    road_c = site[9].strip("'[]")
 
     st.header('\n')
     st.header(site_name)
