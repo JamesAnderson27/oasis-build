@@ -42,19 +42,26 @@ if st.button('Click for details'):
     site_forecast = {}
     site_coord = (site[3],site[4])
     p_code=site[5]
+    rez_type=site[6]
+    rez_link=site[7]
+    fee=site[8]
+    road_c = site[9]
 
     st.header('\n')
     st.subheader(site_name)
-    st.code(site_coord)
-    st.header(':toilet: *Tabspace* :shower: *Tabspace* :potable_water:')
+    st.code('coord --> ',site_coord)
+    #st.header(':toilet: *Tabspace* :shower: *Tabspace* :potable_water:')
     #st.write('Daily Forecast: ', site_weather['prec_type'])
+    st.write(rez_type,'. To visit the public website & make reservations, click the link below.')
+    st.write(rez_link)
+    st.write('Fees required: ',fee)
+    st.write('Vehicle requirements: ',road_c)
+
     st.write(':orange[Daily Alerts] ')
 
     alert_list = list(alert_df.loc[alert_df['park_code']==p_code,['message']]['message'].values)
     for i,a in enumerate(alert_list):
         st.write(':orange['+str(i+1)+']','. '+str(a))
-
-    st.write(':blue[Campsite Type & Fees]')
 
 
 
