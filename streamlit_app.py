@@ -43,7 +43,7 @@ if st.button('Click for details'):
     site_coord = (site[2],site[3])
     p_code=site[4]
     rez_type=site[5]
-    rez_link=site[6]
+    rez_link=str(site[6])
     fee=site[7]
     road_c = site[8]
 
