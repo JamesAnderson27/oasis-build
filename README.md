@@ -1,5 +1,13 @@
 # READ_ME
 
+(3/3)
+
+	- Formatting the DB_campsites fee and road conditions
+	- Reading folium documentation for maptiles, markers and icons.
+	- Updating, coloring the folium map icons with rez_type. Shift to 'openstreetmap' tile.
+	- Including road conditions on streamlit.
+
+
 (2/21)
 
 	- Write script for locating campsite by site_code.
