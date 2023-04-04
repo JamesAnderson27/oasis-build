@@ -52,7 +52,7 @@ if st.button('Click for details'):
     st.code('coord --> '+str(site_coord))
     #st.header(':toilet: *Tabspace* :shower: *Tabspace* :potable_water:')
     #st.write('Daily Forecast: ', site_weather['prec_type'])
-    st.write('<h6>:green['+str(rez_type)+'] | :green['+str(road_c)+']</h6>')
+    st.html_read('<h6>:green['+str(rez_type)+'] | :green['+str(road_c)+']</h6>')
     st.metric('Fee',fee)
     st.write('To visit the public website & make reservations, click the link below.')
     st.write(rez_link)
