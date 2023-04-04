@@ -47,21 +47,21 @@ if st.button('Click for details'):
     fee=site[8]
     road_c = site[9].strip("'[]")
 
-    st.header('\n')
+    st.subheader('\n')
     st.header(site_name)
+    st.write('***'+(rez_type)+'  |  '+str(road_c)+'  |  '+str(fee)+' Fee***')
     st.code('coord --> '+str(site_coord))
-    #st.header(':toilet: *Tabspace* :shower: *Tabspace* :potable_water:')
-    #st.write('Daily Forecast: ', site_weather['prec_type'])
-    st.write('**'+(rez_type)+'  |  '+str(road_c)+'  |  '+str(fee)+' Fee**')
+    st.subheader('\n')
+    
     st.write('To visit the public website & make reservations, click the link below.')
     st.write(rez_link)
-    
+    st.subheader('\n')
 
     st.write(':orange[Daily Alerts] ')
-
     alert_list = list(alert_df.loc[alert_df['park_code']==p_code,['message']]['message'].values)
     for i,a in enumerate(alert_list):
         st.write(':orange['+str(i+1)+']','. '+str(a))
+        st.subheader('\n')
 
 
 
