@@ -7,10 +7,6 @@ import random
 import requests
 import json
 
-# SET THEME
-[theme]
-base="dark"
-primaryColor="purple"
 
 
 # HEADER
