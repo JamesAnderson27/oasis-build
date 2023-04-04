@@ -52,7 +52,7 @@ if st.button('Click for details'):
     st.code('coord --> '+str(site_coord))
     #st.header(':toilet: *Tabspace* :shower: *Tabspace* :potable_water:')
     #st.write('Daily Forecast: ', site_weather['prec_type'])
-    st.write((rez_type)+'  |  '+str(road_c)+'  |  '+str(fee)+' Fee')
+    st.write('**'+(rez_type)+'  |  '+str(road_c)+'  |  '+str(fee)+' Fee**')
     st.write('To visit the public website & make reservations, click the link below.')
     st.write(rez_link)
     
