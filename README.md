@@ -1,5 +1,12 @@
 # READ_ME
 
+(3/14)
+
+	- Adding directions and map key. Changing folium map marker colors.
+	- Scraping amenities, creating boolean dict, creating conditional string formatting. Add amenities to page.
+	- Re-formatting information presentation.
+
+
 (3/3)
 
 	- Formatting the DB_campsites fee and road conditions
