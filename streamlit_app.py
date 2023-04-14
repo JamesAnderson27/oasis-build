@@ -92,13 +92,13 @@ if st.button('Click for details'):
 
     am_string = '|'
     if am_dict['wood']:
-        am_string.append(' :wood: |')
+        am_string = am_string+' :wood: |'
     if am_dict['water']:
-        am_string.append(' :potable_water: |')
+        am_string = am_string+' :potable_water: |'
     if am_dict['toilets']:
-        am_string.append(' :toilet: |')
+        am_string = am_string+' :toilet: |'
     if am_dict['trash']:
-        am_string.append(':wastebasket: |')
+        am_string = am_string+':wastebasket: |'
 
     st.title(am_string)
     
