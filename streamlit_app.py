@@ -41,7 +41,6 @@ st.write('Selected campsite:', site_code)
 
 if st.button('Click for details'):
 
-    # PLACE HOLDER FOR DB READING
     site = site_df[site_df['id']==site_code].values[0]
     site_name = site[2]
 
@@ -64,15 +63,12 @@ if st.button('Click for details'):
     st.write('***'+(rez_type)+'  |  '+str(road_c)+'  |  '+str(fee)+' Fee***')
     st.code('coord --> '+str(site_coord))
     st.subheader('\n')
-
+    
+    st.write('To visit the public website & make reservations, click the link below.')
+    st.write(rez_link)
+    st.subheader('\n')
 
     ## Amenity Display 
-        # :potable_water:
-        # :wood:
-        # :wastebasket:
-        # :toilet:
-
-
     if 'Yes' in firewood:
         am_dict['wood']=True
     else:
@@ -90,7 +86,7 @@ if st.button('Click for details'):
     else:
         am_dict['trash']=True
 
-    am_string = '|'
+    am_string = 'Amenities:|'
     if am_dict['wood']:
         am_string = am_string+' :wood: |'
     if am_dict['water']:
@@ -100,12 +96,7 @@ if st.button('Click for details'):
     if am_dict['trash']:
         am_string = am_string+':wastebasket: |'
 
-    st.title(am_string)
-    
-    st.write('To visit the public website & make reservations, click the link below.')
-    st.write(rez_link)
-    st.subheader('\n')
-
+    st.subtitle(am_string)
     st.write(':red[Daily Alerts] ')
     alert_list = list(alert_df.loc[alert_df['park_code']==p_code,['message']]['message'].values)
     for i,a in enumerate(alert_list):
