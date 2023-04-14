@@ -57,13 +57,6 @@ if st.button('Click for details'):
 
     st.subheader('\n')
     st.header(site_name)
-    st.write('***'+(rez_type)+'  |  '+str(road_c)+'  |  '+str(fee)+' Fee***')
-    st.code('coord --> '+str(site_coord))
-    st.subheader('\n')
-    
-    st.write('To visit the public website & make reservations, click the link below.')
-    st.write(rez_link)
-    st.subheader('\n')
 
     ## Amenity Display 
     if 'Yes' in firewood:
@@ -92,6 +85,15 @@ if st.button('Click for details'):
         am_string = am_string+'  :toilet:  |'
     if am_dict['trash']:
         am_string = am_string+' :wastebasket:  |'
+
+    
+    st.write('***'+(rez_type)+'  |  '+str(road_c)+'  |  '+str(fee)+' Fee***')
+    st.code('coord --> '+str(site_coord))
+    st.subheader('\n')
+    
+    st.write('To visit the public website & make reservations, click the link below.')
+    st.write(rez_link)
+    st.subheader('\n')
 
     st.subheader(am_string)
     st.write(':red[Daily Alerts] ')
