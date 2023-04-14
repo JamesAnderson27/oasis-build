@@ -26,6 +26,8 @@ with open('PRODUCT_foliummap.html','r') as f:
 st.components.v1.html(html_read,height=400)
 
 
+st.write('Hello world!')
+
 # CAMPSITE SELECT AND DISPLAY
 st.write('**Directions: Select a campsite from the map and type the site ID into the box below.**\n')
 st.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Campsites in :green[Green] are First-come-first-serve.*')
