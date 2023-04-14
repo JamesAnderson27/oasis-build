@@ -96,7 +96,7 @@ if st.button('Click for details'):
     if am_dict['trash']:
         am_string = am_string+':wastebasket: |'
 
-    st.subtitle(am_string)
+    st.subheader(am_string)
     st.write(':red[Daily Alerts] ')
     alert_list = list(alert_df.loc[alert_df['park_code']==p_code,['message']]['message'].values)
     for i,a in enumerate(alert_list):
