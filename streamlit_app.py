@@ -11,7 +11,8 @@ import json
 
 # HEADER
 st.title('      :evergreen_tree:  :green[Welcome to Oasis!] :evergreen_tree:')
-st.write('We provide a centralized pool of public information to inform your next trip into the *Great* Outdoors.')
+st.write('We provide a centralized pool of public information to inform your next trip into the *Great* Outdoors.\n\n\n')
+st.write('**Directions: Select a campsite from the map and type the site ID into the box below.**\n')
 
 
 # READ IN DB
@@ -25,11 +26,7 @@ with open('PRODUCT_foliummap.html','r') as f:
     html_read = f.read()
 st.components.v1.html(html_read,height=400)
 
-
-st.write('Hello world!')
-
 # CAMPSITE SELECT AND DISPLAY
-st.write('**Directions: Select a campsite from the map and type the site ID into the box below.**\n')
 st.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Campsites in :green[Green] are First-come-first-serve.*')
 st.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Campsites in :blue[Blue] have reservations available.*')
 
