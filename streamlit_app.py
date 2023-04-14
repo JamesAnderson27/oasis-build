@@ -28,7 +28,7 @@ st.components.v1.html(html_read,height=400)
 
 # CAMPSITE SELECT AND DISPLAY
 st.write('**Directions**\n\n*Campsites in :green[Green] are First-come-first-serve.*')
-st.write('*Campsites in :blue[blue] have reservations available.*')
+st.write('*Campsites in :blue[Blue] have reservations available.*')
 st.write('*Select a campsite from the map and type the site ID into the box below.*')
 site_code = st.number_input('Enter campsite number',
     min_value=int(10),
