@@ -58,6 +58,15 @@ if st.button('Click for details'):
     st.write('***'+(rez_type)+'  |  '+str(road_c)+'  |  '+str(fee)+' Fee***')
     st.code('coord --> '+str(site_coord))
     st.subheader('\n')
+
+
+    ## Amenity Display 
+        # :potable_water:
+        # :wood:
+        # :wastebasket:
+        # :toilet:
+
+    st.write(':potable_water: | :wood: | :wastebasket: | :toilet: ')
     
     st.write('To visit the public website & make reservations, click the link below.')
     st.write(rez_link)
