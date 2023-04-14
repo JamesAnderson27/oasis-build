@@ -44,7 +44,7 @@ if st.button('Click for details'):
     # PLACE HOLDER FOR DB READING
     site = site_df[site_df['id']==site_code].values[0]
     site_name = site[2]
-    #site_alerts = alert_lister()
+
     site_forecast = {}
     site_coord = (site[3],site[4])
     p_code=site[5]
@@ -52,6 +52,12 @@ if st.button('Click for details'):
     rez_link=site[7]
     fee=site[8]
     road_c = site[9].strip("'[]")
+
+    am_dict = {}
+    firewood = site[10]
+    water = site[11]
+    trash = site[12]
+    toilets = site[13]
 
     st.subheader('\n')
     st.header(site_name)
@@ -66,11 +72,6 @@ if st.button('Click for details'):
         # :wastebasket:
         # :toilet:
 
-    am_dict = {}
-    firewood = site[10]
-    water = site[11]
-    trash = site[12]
-    toilets = site[13]
 
     if 'Yes' in firewood:
         am_dict['wood']=True
@@ -89,7 +90,17 @@ if st.button('Click for details'):
     else:
         am_dict['trash']=True
 
-    st.metric(':toilet:')
+    am_string = '|'
+    if am_dict['wood']:
+        am_string.append(' :wood: |')
+    if am_dict['water']:
+        am_string.append(' :potable_water: |')
+    if am_dict['toilets']:
+        am_string.append(' :toilet: |')
+    if am_dict['trash']:
+        am_string.append(':wastebasket: |')
+
+    st.title(am_string)
     
     st.write('To visit the public website & make reservations, click the link below.')
     st.write(rez_link)
