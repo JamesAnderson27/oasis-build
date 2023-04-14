@@ -66,7 +66,30 @@ if st.button('Click for details'):
         # :wastebasket:
         # :toilet:
 
-    st.write(':potable_water: | :wood: | :wastebasket: | :toilet: ')
+    am_dict = {}
+    firewood = site[9]
+    water = site[10]
+    trash = site[11]
+    toilets = site[12]
+
+    if 'Yes' in firewood:
+        am_dict['wood']=True
+    else:
+        am_dict['wood']=False
+    if 'No' in water:
+        am_dict['water']=False
+    else:
+        am_dict['water']=True
+    if 'No' in toilets:
+        am_dict['toilets']=False
+    else:
+        am_dict['toilets']=True
+    if 'No' in trash:
+        am_dict['trash']=False
+    else:
+        am_dict['trash']=True
+
+    st.metric(':toilet:')
     
     st.write('To visit the public website & make reservations, click the link below.')
     st.write(rez_link)
