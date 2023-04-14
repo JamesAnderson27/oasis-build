@@ -86,15 +86,15 @@ if st.button('Click for details'):
     else:
         am_dict['trash']=True
 
-    am_string = 'Amenities:|'
+    am_string = 'Amenities:  | '
     if am_dict['wood']:
-        am_string = am_string+' :wood: |'
+        am_string = am_string+'  :wood:  |'
     if am_dict['water']:
-        am_string = am_string+' :potable_water: |'
+        am_string = am_string+'  :potable_water:  |'
     if am_dict['toilets']:
-        am_string = am_string+' :toilet: |'
+        am_string = am_string+'  :toilet:  |'
     if am_dict['trash']:
-        am_string = am_string+':wastebasket: |'
+        am_string = am_string+' :wastebasket:  |'
 
     st.subheader(am_string)
     st.write(':red[Daily Alerts] ')
