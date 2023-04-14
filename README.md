@@ -4,7 +4,7 @@
 
 	- Adding directions and map key. Changing folium map marker colors.
 	- Scraping amenities, creating boolean dict, creating conditional string formatting. Add amenities to page.
-	- Re-formatting information presentation.
+	- Re-formatting information presentation. 
 
 
 (3/3)
