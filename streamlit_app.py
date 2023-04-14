@@ -56,7 +56,7 @@ if st.button('Click for details'):
     toilets = site[13]
 
     st.subheader('\n')
-    st.header(site_name)
+    st.header(site_name,site_coord)
 
     ## Amenity Display 
     if 'Yes' in firewood:
@@ -94,7 +94,6 @@ if st.button('Click for details'):
     st.write(rez_link)
     st.subheader('\n')
 
-    st.code('coord --> '+str(site_coord))
     st.write(':red[Daily Alerts] ')
     alert_list = list(alert_df.loc[alert_df['park_code']==p_code,['message']]['message'].values)
     for i,a in enumerate(alert_list):
