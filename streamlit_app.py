@@ -86,7 +86,7 @@ if st.button('Click for details'):
     if am_dict['trash']:
         am_string = am_string+' :wastebasket:  |'
 
-    
+    st.subheader(am_string)
     st.write('***'+(rez_type)+'  |  '+str(road_c)+'  |  '+str(fee)+' Fee***')
     st.code('coord --> '+str(site_coord))
     st.subheader('\n')
@@ -94,8 +94,6 @@ if st.button('Click for details'):
     st.write('To visit the public website & make reservations, click the link below.')
     st.write(rez_link)
     st.subheader('\n')
-
-    st.subheader(am_string)
     st.write(':red[Daily Alerts] ')
     alert_list = list(alert_df.loc[alert_df['park_code']==p_code,['message']]['message'].values)
     for i,a in enumerate(alert_list):
