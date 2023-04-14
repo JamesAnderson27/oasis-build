@@ -56,7 +56,7 @@ if st.button('Click for details'):
     toilets = site[13]
 
     st.subheader('\n')
-    st.header(site_name,site_coord)
+    st.header(str(site_name)+' '+str(site_coord))
 
     ## Amenity Display 
     if 'Yes' in firewood:
