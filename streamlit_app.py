@@ -67,10 +67,10 @@ if st.button('Click for details'):
         # :toilet:
 
     am_dict = {}
-    firewood = site[9]
-    water = site[10]
-    trash = site[11]
-    toilets = site[12]
+    firewood = site[10]
+    water = site[11]
+    trash = site[12]
+    toilets = site[13]
 
     if 'Yes' in firewood:
         am_dict['wood']=True
