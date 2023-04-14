@@ -100,5 +100,6 @@ if st.button('Click for details'):
         st.write(':red['+str(i+1)+']','. '+str(a))
         st.subheader('\n')
 
+    st.code('coord -> '+str(site_coord))
 
 
