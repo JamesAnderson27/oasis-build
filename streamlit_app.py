@@ -176,13 +176,13 @@ if st.button('Click for details'):
 
     am_string = 'Amenities:  | '
     if am_dict['wood']:
-        am_string = am_string+'  :wood:  |'
+        am_string = am_string+'&nbsp;&nbsp;:wood:&nbsp;&nbsp;|'
     if am_dict['water']:
-        am_string = am_string+'  :potable_water:  |'
+        am_string = am_string+'&nbsp;&nbsp;:potable_water:&nbsp;&nbsp;|'
     if am_dict['toilets']:
-        am_string = am_string+'  :toilet:  |'
+        am_string = am_string+'&nbsp;&nbsp;:toilet:&nbsp;&nbsp;|'
     if am_dict['trash']:
-        am_string = am_string+' :wastebasket:  |'
+        am_string = am_string+'&nbsp;&nbsp;:wastebasket:&nbsp;&nbsp;|'
 
     st.subheader(am_string)
     st.write('***'+(rez_type)+'  |  '+str(road_c)+'  |  '+str(fee)+' Fee***')
