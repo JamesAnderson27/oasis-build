@@ -79,8 +79,7 @@ site_dict={
     "toilets":toilets
 }
 
-df = pd.DataFrame(site_dict)
-df.to_csv('DB_campsites.csv')
+site_df = pd.DataFrame(site_dict)
 
 # Alert Scrape
 api_key='&api_key=Vsv3OfLMOGtoptQS7V5zvYIKawJZ29UbTErkVLgl'
@@ -106,9 +105,7 @@ alert_dict = {
     'park_code':park_code,
     'message':message
 }
-df = pd.DataFrame(alert_dict)
-df.head()
-df.to_csv('DB_alerts.csv')
+alert_df = pd.DataFrame(alert_dict)
 
 # HEADER
 st.title('      :evergreen_tree:  :green[Welcome to Oasis!] :evergreen_tree:')
@@ -116,8 +113,8 @@ st.write('We provide a centralized pool of public information to inform your nex
 st.write('**Directions: Select a campsite from the map and type the site ID into the box below.**\n')
 
 # READ IN DB
-alert_df = pd.read_csv('DB_alerts.csv')
-site_df = pd.read_csv('DB_campsites.csv')
+#alert_df = pd.read_csv('DB_alerts.csv')
+#site_df = pd.read_csv('DB_campsites.csv')
 
 
 # DISPLAY FOLIUM MAP
