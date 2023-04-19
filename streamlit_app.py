@@ -79,9 +79,10 @@ for park in data["data"]:
 _=[]
 for item in rez_link:
     if len(str(item))<1:
-        _.append('No Link Available')
+        _.append('*No Link Available*')
     else:
         _.append(item)
+rez_link = _
 
 n = len(data['data'])
 ids = np.arange(10,10+n)
