@@ -3,11 +3,36 @@ import pandas as pd
 import subprocess
 import sys
 
-subprocess.run([f"{sys.executable}", "SCRIPT_alertscrape.py"])
-subprocess.run([f"{sys.executable}", "SCRIPT_campsitescrape.py"])
-subprocess.run([f"{sys.executable}", "SCRIPT_foliummap.py"])
 
 ## PLACEHOLDER
+
+api_key='&api_key=Vsv3OfLMOGtoptQS7V5zvYIKawJZ29UbTErkVLgl'
+url = 'https://developer.nps.gov/api/v1/alerts?stateCode=co'
+limits='&start=0&limit=50'
+r = requests.get(url+limits+api_key)
+content = r.content
+data = json.loads(content.decode('utf-8'))
+
+title=[]
+park_code=[]
+message=[]
+
+for i,item in enumerate(data['data']):
+    title.append(item['title'])
+    park_code.append(item['parkCode'])
+    message.append(item['description'])
+    
+assert len(park_code)==len(message)==len(title)
+
+alert_dict = {
+    'title':title,
+    'park_code':park_code,
+    'message':message
+}
+#df = pd.DataFrame(alert_dict)
+#df.head()
+#df.to_csv('DB_alerts.csv')
+st.table(alert_dict)
 
 # HEADER
 st.title('      :evergreen_tree:  :green[Welcome to Oasis!] :evergreen_tree:')
