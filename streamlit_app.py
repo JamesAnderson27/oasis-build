@@ -76,6 +76,13 @@ for park in data["data"]:
         rez_type.append('Reservations Available')
         rez_link.append(park['reservationUrl'])
 
+_=[]
+for item in rez_link:
+    if len(str(item))<1:
+        _.append('No Link Available')
+    else:
+        _.append(item)
+
 n = len(data['data'])
 ids = np.arange(10,10+n)
 
@@ -97,12 +104,7 @@ site_dict={
 
 site_df = pd.DataFrame(site_dict)
 
-_=[]
-for item in site_df['reserve_link']:
-    if len(str(item))<1:
-        _.append('No Link Available')
-    else:
-        _.append(item)
+
 
 site_df['reserve_link'] = _
 site_df['road_conditions'] = site_df['road_conditions'].apply(lambda x:x[0].strip("[]''"))
