@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd
 import subprocess
+import sys
 
-subprocess.run(["python", "SCRIPT_alertscrape.py"])
-subprocess.run(["python", "SCRIPT_campsitescrape.py"])
-subprocess.run(["python", "SCRIPT_foliummap.py"])
+subprocess.run([f"{sys.executable}", "SCRIPT_alertscrape.py"])
+subprocess.run([f"{sys.executable}", "SCRIPT_campsitescrape.py"])
+subprocess.run([f"{sys.executable}", "SCRIPT_foliummap.py"])
 
 ## PLACEHOLDER
 
