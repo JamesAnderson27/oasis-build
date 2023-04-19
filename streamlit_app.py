@@ -133,20 +133,20 @@ st.write('Selected campsite:', site_code)
 if st.button('Click for details'):
 
     site = site_df[site_df['id']==site_code].values[0]
-    site_name = site[2]
+    site_name = site[1]
 
-    site_coord = (site[3],site[4])
-    p_code=site[5]
-    rez_type=site[6]
-    rez_link=site[7]
-    fee=site[8]
-    road_c = site[9].strip("'[]")
+    site_coord = (site[2],site[3])
+    p_code=site[4]
+    rez_type=site[5]
+    rez_link=site[6]
+    fee=site[7]
+    road_c = site[8].strip("'[]")
 
     am_dict = {}
-    firewood = site[10]
-    water = site[11]
-    trash = site[12]
-    toilets = site[13]
+    firewood = site[9]
+    water = site[10]
+    trash = site[11]
+    toilets = site[12]
 
     st.subheader('\n')
     st.header(str(site_name))
