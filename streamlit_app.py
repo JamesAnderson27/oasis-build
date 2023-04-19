@@ -105,11 +105,8 @@ site_dict={
 
 site_df = pd.DataFrame(site_dict)
 
-
-
 site_df['reserve_link'] = _
 site_df['road_conditions'] = site_df['road_conditions'].apply(lambda x:x[0].strip("[]''"))
-
 
 # HEADER
 st.title('      :evergreen_tree:  :green[Welcome to Oasis!] :evergreen_tree:')
