@@ -33,7 +33,7 @@ alert_dict = {
     'message':message
 }
 alert_df = pd.DataFrame(alert_dict)
-st.table(alert_df)
+
 
 ## Campsite Scrape
 
@@ -75,8 +75,6 @@ for park in data["data"]:
     else:
         rez_type.append('Reservations Available')
         rez_link.append(park['reservationUrl'])
-    
-    
 
 n = len(data['data'])
 ids = np.arange(10,10+n)
@@ -98,11 +96,16 @@ site_dict={
 }
 
 site_df = pd.DataFrame(site_dict)
-site_df['reserve_link'] = site_df['reserve_link'].fillna('*No Link Available.*')
-site_df['road_conditions'] = site_df['road_conditions'].apply(lambda x:x[0].strip("[]''"))
-#df.to_csv('DB_campsites.csv')
 
-st.table(site_df)
+_=[]
+for item in df['reserve_link']:
+    if len(str(item))<1:
+        _.append('No Link Available')
+    else:
+        _.append(item)
+
+site_df['reserve_link'] = _
+site_df['road_conditions'] = site_df['road_conditions'].apply(lambda x:x[0].strip("[]''"))
 
 
 # HEADER
@@ -110,15 +113,12 @@ st.title('      :evergreen_tree:  :green[Welcome to Oasis!] :evergreen_tree:')
 st.write('We provide a centralized pool of public information to inform your next trip into the *Great* Outdoors.\n\n\n')
 st.write('**Directions: Select a campsite from the map and type the site ID into the box below.**\n')
 
-# READ IN DB
-#alert_df = pd.read_csv('DB_alerts.csv')
-#site_df = pd.read_csv('DB_campsites.csv')
-
 
 # DISPLAY FOLIUM MAP
 with open('PRODUCT_foliummap.html','r') as f:
     html_read = f.read()
 st.components.v1.html(html_read,height=400)
+
 
 # CAMPSITE SELECT AND DISPLAY
 st.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Campsites in :green[Green] are First-come-first-serve.*')
