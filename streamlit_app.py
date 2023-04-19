@@ -98,7 +98,7 @@ site_dict={
 site_df = pd.DataFrame(site_dict)
 
 _=[]
-for item in df['reserve_link']:
+for item in site_df['reserve_link']:
     if len(str(item))<1:
         _.append('No Link Available')
     else:
