@@ -45,7 +45,7 @@ for i in range(len(gdf)):
     
     
     if rez == 'First-come-first-serve':
-        marker_color='darkgreen'
+        marker_color='red'
     if rez == 'Reservations Available':
         marker_color='darkblue'
     
