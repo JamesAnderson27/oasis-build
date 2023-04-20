@@ -1,12 +1,11 @@
 import streamlit as st
-import numpy as np
+
 import pandas as pd
-import requests
-import json
+import numpy as np
 import random
 
-
-## PLACEHOLDER
+import requests
+import json
 
 ## Alert Scrape
 api_key='&api_key=Vsv3OfLMOGtoptQS7V5zvYIKawJZ29UbTErkVLgl'
@@ -108,18 +107,18 @@ site_df = pd.DataFrame(site_dict)
 site_df['reserve_link'] = _
 site_df['road_conditions'] = site_df['road_conditions'].apply(lambda x:x[0].strip("[]''"))
 
-# HEADER
+## Header
 st.title('      :evergreen_tree:  :green[Welcome to Oasis] :evergreen_tree:')
 st.write('**Directions: Select a campsite from the map and type the site ID into the box below.**\n')
 
 
-# DISPLAY FOLIUM MAP
+## Display folium map
 with open('PRODUCT_foliummap.html','r') as f:
     html_read = f.read()
 st.components.v1.html(html_read,height=400)
 
 
-# CAMPSITE SELECT AND DISPLAY
+## Select and search
 st.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Campsites in :green[Green] are First-come-first-serve.*')
 st.write('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Campsites in :blue[Blue] have reservations available.*')
 
@@ -130,6 +129,8 @@ site_code = st.number_input('Enter campsite number',
 st.write('Selected campsite:', site_code)
 
 if st.button('Click for details'):
+
+    ## Campsite variable assignment
 
     site = site_df[site_df['id']==site_code].values[0]
     site_name = site[1]
@@ -150,7 +151,7 @@ if st.button('Click for details'):
     st.subheader('\n')
     st.header(str(site_name))
 
-    ## Amenity Display 
+    ## Amenity display 
     if 'Yes' in firewood:
         am_dict['wood']=True
     else:
@@ -182,15 +183,21 @@ if st.button('Click for details'):
     st.write('***'+(rez_type)+'  |  '+str(road_c)+'  |  '+str(fee)+' Fee***')
     st.subheader('\n')
     
+    ## Link display
+
     st.write('To visit the public website & make reservations, click the link below.')
     st.write(rez_link)
     st.subheader('\n')
+
+    ## Alert display
 
     st.write(':red[Daily Alerts] ')
     alert_list = list(alert_df.loc[alert_df['park_code']==p_code,['message']]['message'].values)
     for i,a in enumerate(alert_list):
         st.write(':red['+str(i+1)+']','. '+str(a))
         st.subheader('\n')
+
+    ## Coordinate display
 
     st.code('coord -> '+str(site_coord))
 

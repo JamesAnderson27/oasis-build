@@ -2,13 +2,14 @@
 
 (3/20)
 
-	- Adding SCRIPTS to .py to continuously update NPS data. Minor configurations requires to integrate.
+	- Adding SCRIPTS to .py to continuously update NPS data. Minor configurations required to integrate.
 	- Formatting changes: remove descriptor subheading + '!' to increase readability of directions.
 		- Feedback from 3/4 of participants: difficulty understanding 'select and search' campsite.
 	- Future directions
 		- User should be able to contribute to campsite DB. Allow for dispersed campsite upload. 
 		- Safety features - fire, animals, water contaminants, etc...
 		- HTML interactive. On click replaces st.button function.
+		- Adding a toggle feature on folium map: climbing areas, hiking trails, POI, Ranger Stations.
 
 (3/14)
 
@@ -19,7 +20,7 @@
 
 (3/3)
 
-	- Formatting the DB_campsites fee and road conditions
+	- Formatting the DB_campsites fee and road conditions.
 	- Reading folium documentation for maptiles, markers and icons.
 	- Updating, coloring the folium map icons with rez_type. Shift to 'openstreetmap' tile.
 	- Including road conditions on streamlit.
