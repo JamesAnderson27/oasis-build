@@ -110,7 +110,6 @@ site_df['road_conditions'] = site_df['road_conditions'].apply(lambda x:x[0].stri
 
 # HEADER
 st.title('      :evergreen_tree:  :green[Welcome to Oasis!] :evergreen_tree:')
-st.write('We provide a centralized pool of public information to inform your next trip into the *Great* Outdoors.\n\n\n')
 st.write('**Directions: Select a campsite from the map and type the site ID into the box below.**\n')
 
 
