@@ -15,24 +15,20 @@ r = requests.get(url+limits+api_key)
 content = r.content
 data = json.loads(content.decode('utf-8'))
 
-title=[]
-park_code=[]
-message=[]
+park_code,title,message = [],[],[]
 
 for i,item in enumerate(data['data']):
     title.append(item['title'])
     park_code.append(item['parkCode'])
     message.append(item['description'])
-    
-assert len(park_code)==len(message)==len(title)
 
 alert_dict = {
     'title':title,
     'park_code':park_code,
     'message':message
 }
-alert_df = pd.DataFrame(alert_dict)
 
+alert_df = pd.DataFrame(alert_dict)
 
 ## Campsite Scrape
 
@@ -56,12 +52,10 @@ for park in data["data"]:
     water.append(park['amenities']['potableWater'][0])
     wood.append(park['amenities']['firewoodForSale'])
     
-
     if len(park['fees'])>=1:
         fee.append(float(park['fees'][0]['cost']))
     else:
         fee.append('No Fee Recorded')
-    
     
     n_res = int(park['numberOfSitesReservable'])
     n_fc = int(park['numberOfSitesFirstComeFirstServe'])
@@ -69,8 +63,7 @@ for park in data["data"]:
     if n_fc>0:
         rez_type.append('First-come-first-serve')
         rez_link.append(park['reservationUrl'])
-    
-        
+      
     else:
         rez_type.append('Reservations Available')
         rez_link.append(park['reservationUrl'])
@@ -103,8 +96,6 @@ site_dict={
 }
 
 site_df = pd.DataFrame(site_dict)
-
-site_df['reserve_link'] = _
 site_df['road_conditions'] = site_df['road_conditions'].apply(lambda x:x[0].strip("[]''"))
 
 ## Header
@@ -141,17 +132,19 @@ if st.button('Click for details'):
     rez_link=site[6]
     fee=site[7]
     road_c = site[8].strip("'[]")
-
-    am_dict = {}
     firewood = site[9]
     water = site[10]
     trash = site[11]
     toilets = site[12]
 
+    ## Name display
+
     st.subheader('\n')
     st.header(str(site_name))
 
     ## Amenity display 
+
+    am_dict = {}
     if 'Yes' in firewood:
         am_dict['wood']=True
     else:

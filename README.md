@@ -23,7 +23,7 @@
 	- Formatting the DB_campsites fee and road conditions.
 	- Reading folium documentation for maptiles, markers and icons.
 	- Updating, coloring the folium map icons with rez_type. Shift to 'openstreetmap' tile.
-	- Including road conditions on streamlit.
+	- Including road conditions on Streamlit.
 
 
 (2/21)
@@ -31,12 +31,12 @@
 	- Write script for locating campsite by site_code.
 	- Working on displaying site-specific information to be conventional & visually-cohesive.
 	- Adding Park Code to the DB_campsites to process DB_alerts.
-	- Displaying [alerts,coord] on streamlit.
+	- Displaying [alerts,coord] on Streamlit.
 	- Formatting changes.
 
 (2/20)
 
-	- Reading streamlit documentation. Creating streamlit html components.
+	- Reading Streamlit documentation. Creating Streamlit html components.
 	- File management and name consistency (DB, PRODUCT, SCRIPT).
 	- Changing txt -> csv storage.
 	- Editing folium map markers.
