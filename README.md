@@ -1,5 +1,15 @@
 # READ_ME
 
+(3/20)
+
+	- Adding SCRIPTS to .py to continuously update NPS data. Minor configurations requires to integrate.
+	- Formatting changes: remove descriptor subheading + '!' to increase readability of directions.
+		- Feedback from 3/4 of participants: difficulty understanding 'select and search' campsite.
+	- Future directions
+		- User should be able to contribute to campsite DB. Allow for dispersed campsite upload. 
+		- Safety features - fire, animals, water contaminants, etc...
+		- HTML interactive. On click replaces st.button function.
+
 (3/14)
 
 	- Adding directions and map key. Changing folium map marker colors.
