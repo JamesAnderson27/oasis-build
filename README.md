@@ -1,6 +1,7 @@
 # READ_ME
 
 ![alt text](https://github.com/[jamesanderson27]/[oasis-build]/blob/[master]/streamlit_IA.png?raw=true)
+![Screenshot](streamlit_IA.png)
 
 (3/20)
 
