@@ -1,7 +1,5 @@
 # READ_ME
 
-![Screenshot](streamlit_IA.png)
-
 (3/20)
 
 	- Adding SCRIPTS to .py to continuously update NPS data. Minor configurations required to integrate.
