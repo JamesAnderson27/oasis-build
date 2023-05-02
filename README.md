@@ -1,5 +1,7 @@
 # READ_ME
 
+![alt text](https://github.com/[jamesanderson27]/[oasis-build]/blob/[master]/streamlit_IA.png?raw=true)
+
 (3/20)
 
 	- Adding SCRIPTS to .py to continuously update NPS data. Minor configurations required to integrate.
